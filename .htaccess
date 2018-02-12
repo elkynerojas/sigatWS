@@ -1,0 +1,6 @@
+RewriteEngine On
+
+RewriteRule ^([a-zA-Z_-]*)$ index.php?recurso=$1
+RewriteRule ^([a-zA-Z_-]*)/([a-zA-Z_-]+)$ index.php?recurso=$1&accion=$2 [L,QSA]
+RewriteRule ^([a-zA-Z_-]*)/([a-zA-Z_-]+)/([a-zA-Z0-9_-]+)$ index.php?recurso=$1&accion=$2&id=$3 [L,QSA]
+
